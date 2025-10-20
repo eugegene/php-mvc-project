@@ -129,3 +129,14 @@ Authentication is handled by the `AuthController` (`src/controllers/AuthControll
 - Functionality:
   - Users can change the background color of the site; this setting may be stored in the session.
   - Users can save their name and gender; these settings may be stored in cookies or the database depending on implementation.
+
+<img width="1920" height="921" alt="image" src="https://github.com/user-attachments/assets/1350794f-f7e4-45e4-bfb0-44c777fb6326" />
+
+<img width="1904" height="926" alt="image" src="https://github.com/user-attachments/assets/26694544-dbc5-4bdf-9f0d-75bfdf5c2c10" />
+
+<img width="1920" height="923" alt="image" src="https://github.com/user-attachments/assets/b4bfbb7d-3fcd-4fe9-851a-aadfa5c7c285" />
+
+<img width="1903" height="922" alt="image" src="https://github.com/user-attachments/assets/c78fbf63-ce4f-4273-87e3-d46ae606ed0e" />
+
+
+
