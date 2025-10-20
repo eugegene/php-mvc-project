@@ -1,8 +1,9 @@
 <div class="crud-table-wrapper">
-    <h2>Manage news</h2>
-    <a href="index.php?page=news&action=create" class="crud-btn">Add</a>
-
-    <table class="crud-form">
+    <div class="crud-header">
+        <h2>Manage News</h2>
+        <a href="index.php?page=news&action=create" class="crud-btn add-new">Add News</a>
+    </div>
+    <table class="crud-table">
         <tr>
             <th>ID</th>
             <th>Title</th>

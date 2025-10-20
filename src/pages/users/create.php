@@ -1,15 +1,15 @@
-<div class="crud-table-wrapper">
-    <h2>Add user</h2>
-    <form class="crud-form" action="index.php?page=users&action=create" method="post">
+<div class="crud-form">
+    <h2>Add User</h2>
+    <form action="index.php?page=users&action=create" method="post">
         <input hidden name="action" value="save_created_user">
-        <div>
+        <div class="form-group">
             <label for="username">Name:</label>
             <input type="text" id="username" name="username" required>
         </div>
-        <div>
+        <div class="form-group">
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
         </div>
-        <button class="crud-btn" type="submit">Save</button>
+        <button class="crud-submit-btn" type="submit">Save</button>
     </form>
 </div>
