@@ -1,6 +1,6 @@
 <div class="crud-table-wrapper">
   <h2>Edit page</h2>
-  <form class="crud-table" action="index.php?page=pages&action=edit&id=<?= $page_data['id'] ?>" method="post">
+  <form class="crud-form" action="index.php?page=pages&action=edit&id=<?= $page_data['id'] ?>" method="post">
     <input hidden name="action" value="save_edited">
     <div>
       <label for="title">Title:</label>
@@ -22,6 +22,6 @@
       <label for="content">Content:</label>
       <textarea id="content" name="content" required><?= htmlspecialchars($page_data['content']) ?></textarea>
     </div>
-    <button class="crud-btn" type="submit">Save</button>
+    <button class="crud-btn add-new" type="submit">Save</button>
   </form>
 </div>

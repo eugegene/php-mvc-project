@@ -2,7 +2,7 @@
     <h2>Manage news</h2>
     <a href="index.php?page=news&action=create" class="crud-btn">Add</a>
 
-    <table class="crud-table">
+    <table class="crud-form">
         <tr>
             <th>ID</th>
             <th>Title</th>

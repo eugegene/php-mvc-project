@@ -1,26 +1,30 @@
-<h2>Settings</h2>
+<div class="general-form">
+    <h2>Settings</h2>
 
-<form action="index.php?page=settings" method="post">
-    <fieldset>
+    <form action="index.php?page=settings" method="post">
         <input type="hidden" name="action" value="save_bgcolor">
-        <label class="form-select" for="bgcolor">Background color:</label>
-        <input type="color" id="bgcolor" name="bgcolor" value="#ffffff" required>
-        <input class="form-submit" type="submit" value="Save">
-    </fieldset>
-</form>
+        <div class="form-group">
+            <label for="bgcolor">Background Color:</label>
+            <input type="color" id="bgcolor" name="bgcolor" value="#ffffff" required>
+        </div>
+        <button class="crud-submit-btn" type="submit">Save Color</button>
+    </form>
+</div>
 
-<form action="index.php?page=settings" method="post">
-    <fieldset>
+<div class="general-form">
+    <form action="index.php?page=settings" method="post">
         <input type="hidden" name="action" value="save_user">
-        <label for="name">Name:</label>
-        <input class="form-text" type="text" id="name" name="name" required>
-
-        <label for="gender">Sex:</label>
-        <select class="form-select" id="gender" name="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-        </select>
-
-        <input class="form-submit" type="submit" value="Save">
-    </fieldset>
-</form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <button class="crud-submit-btn" type="submit">Save User Info</button>
+    </form>
+</div>

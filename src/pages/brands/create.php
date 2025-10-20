@@ -1,6 +1,6 @@
 <div class="crud-table-wrapper">
     <h2>Add brand</h2>
-    <form class="crud-table" action="index.php?page=brands&action=create" method="post">
+    <form class="crud-form" action="index.php?page=brands&action=create" method="post">
         <input hidden name="action" value="save_created_brand">
         <div>
             <label for="name">Name:</label>

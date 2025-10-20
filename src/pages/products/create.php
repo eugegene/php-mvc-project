@@ -1,6 +1,6 @@
 <div class="crud-table-wrapper">
     <h2>Edit product</h2>
-    <form class="crud-table" action="index.php?page=products&action=create" method="post">
+    <form class="crud-form" action="index.php?page=products&action=create" method="post">
         <input hidden name="action" value="save_created_product">
         <div>
             <label for="name">Title:</label>

@@ -1,16 +1,20 @@
-<h2>Autorisation</h2>
+<div class="general-form">
+    <h2>Authorization</h2>
 
-<?php if (!empty($error)): ?>
-    <div class="error"><?= $error ?></div>
-<?php endif; ?>
+    <?php if (!empty($error)): ?>
+        <div class="form-error"><?= $error ?></div>
+    <?php endif; ?>
 
-<form action="index.php?page=auth" method="post">
-    <fieldset>
+    <form action="index.php?page=auth" method="post">
         <input type="hidden" name="action" value="login">
-            <label for="username">Username:</label><br>
-            <input class="form-text" type="text" id="username" name="username" required>
-            <label for="password">Password:</label><br>
-            <input class="form-text" type="password" id="password" name="password" required>
-        <button class="form-submit" type="submit">Login</button>
-    </fieldset>
-</form>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button class="crud-submit-btn" type="submit">Sign In</button>
+    </form>
+</div>

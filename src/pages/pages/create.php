@@ -1,6 +1,6 @@
 <div class="crud-table-wrapper">
     <h2>Add page</h2>
-    <form class="crud-table" action="index.php?page=pages&action=create" method="post">
+    <form class="crud-form" action="index.php?page=pages&action=create" method="post">
         <input hidden name="action" value="save_created_page">
         <div>
             <label for="title">Title:</label>

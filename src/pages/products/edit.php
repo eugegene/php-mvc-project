@@ -1,6 +1,6 @@
 <div class="crud-table-wrapper">
     <h2>Edit product</h2>
-    <form class="crud-table" action="index.php?page=products&action=edit&id=<?= $product['id'] ?>" method="post">
+    <form class="crud-form" action="index.php?page=products&action=edit&id=<?= $product['id'] ?>" method="post">
         <input hidden name="action" value="save_edited">
         <div>
             <label for="name">Title:</label>
@@ -20,6 +20,6 @@
             <label for="price">Price:</label>
             <input type="number" id="price" name="price" step="0.01" value="<?= $product['price'] ?>" required>
         </div>
-        <button class="crud-btn" type="submit">Save</button>
+        <button class="crud-btn add-new" type="submit">Save</button>
     </form>
 </div>

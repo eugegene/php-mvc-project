@@ -2,7 +2,7 @@
     <h2>Manage brands</h2>
     <a href="index.php?page=brands&action=create" class="crud-btn">Add</a>
 
-    <table class="crud-table">
+    <table class="crud-form">
         <tr>
             <th>ID</th>
             <th>Name</th>
