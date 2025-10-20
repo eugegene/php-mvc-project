@@ -32,16 +32,11 @@
 <main>
 
 <?php
-$name = Utils::getCookie('name', 'Гість');
+$name = Utils::getCookie('name', 'Guest');
 $gender = Utils::getCookie('gender');
 
-if ($name !== 'Гість') {
-    $greeting = "Вітаю, " . htmlspecialchars($name) . "!";
-    if ($gender === 'male') {
-        $greeting = "Вітаю, пане " . htmlspecialchars($name) . "!";
-    } elseif ($gender === 'female') {
-        $greeting = "Вітаю, пані " . htmlspecialchars($name) . "!";
-    }
+if ($name !== 'Guest' && $name !== 'Guest') {
+    $greeting = "Hello, " . htmlspecialchars($name) . "!";
     echo "<h2>$greeting</h2>";
 }
 ?>

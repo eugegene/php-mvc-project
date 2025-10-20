@@ -1,4 +1,4 @@
-<h2>Авторизація</h2>
+<h2>Autorisation</h2>
 
 <?php if (!empty($error)): ?>
     <div class="error"><?= $error ?></div>
@@ -7,10 +7,10 @@
 <form action="index.php?page=auth" method="post">
     <fieldset>
         <input type="hidden" name="action" value="login">
-            <label for="username">Логін:</label><br>
+            <label for="username">Username:</label><br>
             <input class="form-text" type="text" id="username" name="username" required>
-            <label for="password">Пароль:</label><br>
+            <label for="password">Password:</label><br>
             <input class="form-text" type="password" id="password" name="password" required>
-        <button class="form-submit" type="submit">Увійти</button>
+        <button class="form-submit" type="submit">Login</button>
     </fieldset>
 </form>

@@ -1,4 +1,4 @@
-<h2>Форма</h2>
+<h2>Form</h2>
 
 <form action="index.php?page=form" method="post">
 <fieldset>

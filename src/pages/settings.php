@@ -1,4 +1,4 @@
-<h2>Налаштування</h2>
+<h2>Settings</h2>
 
 <form action="index.php?page=settings" method="post">
     <fieldset>
