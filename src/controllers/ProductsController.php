@@ -15,10 +15,10 @@ class ProductsController extends Controller
     {
         $products = $this->model->getAllWithBrands();
         $data = [
-            'page' => 'Управління товарами',
+            'page' => 'Manage Products',
             'products' => $products,
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff'),
-            'name' => Utils::getCookie('name', 'Гість'),
+            'name' => Utils::getCookie('name', 'Guest'),
             'gender' => Utils::getCookie('gender', '')
         ];
         $this->view->render($data, 'products/products.php');
@@ -28,7 +28,7 @@ class ProductsController extends Controller
     {
         $brands = $this->brandsModel->getAll();
         $data = [
-            'page' => 'Додати товар',
+            'page' => 'Add product',
             'brands' => $brands,
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff')
         ];
@@ -62,7 +62,7 @@ class ProductsController extends Controller
         }
 
         $data = [
-            'page' => 'Редагувати товар',
+            'page' => 'Edit product',
             'product' => $product,
             'brands' => $brands,
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff')

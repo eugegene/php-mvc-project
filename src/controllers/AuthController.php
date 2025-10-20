@@ -14,7 +14,7 @@ class AuthController extends Controller
     private function _render_page($error = ''): void
     {
         $data = [
-            'page' => 'Авторизація',
+            'page' => 'Autorisation',
             'error' => $error,
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff')
         ];
@@ -40,7 +40,7 @@ class AuthController extends Controller
             exit;
         }
 
-        $this->_render_page('Невірний логін або пароль');
+        $this->_render_page('Invalid username or password');
     }
 
     public function action_logout()

@@ -1,16 +1,16 @@
 <div class="crud-table-wrapper">
-    <h2>Управління сторінками</h2>
-    <a href="index.php?page=pages&action=create" class="crud-btn">Додати сторінку</a>
+    <h2>Manage pages</h2>
+    <a href="index.php?page=pages&action=create" class="crud-btn">Add</a>
 
     <table class="crud-table">
         <tr>
             <th>ID</th>
-            <th>Заголовок</th>
+            <th>Title</th>
             <th>Keywords</th>
             <th>Description</th>
             <th>H1</th>
-            <th>Контент</th>
-            <th>Дія</th>
+            <th>Content</th>
+            <th>Action</th>
         </tr>
         <?php while ($page_item = $pages->fetch_assoc()): ?>
             <tr>
@@ -23,9 +23,9 @@
                     <div class="content-preview"><?= htmlspecialchars(substr($page_item['content'], 0, 100)) ?>...</div>
                 </td>
                 <td>
-                    <a href="index.php?page=pages&action=edit&id=<?= $page_item['id'] ?>">Редагувати</a>
+                    <a href="index.php?page=pages&action=edit&id=<?= $page_item['id'] ?>">Edit</a>
                     <a href="index.php?page=pages&action=delete&id=<?= $page_item['id'] ?>"
-                        onclick="return confirm('Видалити?')">Видалити</a>
+                        onclick="return confirm('Delete?')">Delete</a>
                 </td>
             </tr>
         <?php endwhile; ?>

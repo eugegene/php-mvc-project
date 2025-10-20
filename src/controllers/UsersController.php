@@ -13,10 +13,10 @@ class UsersController extends Controller
     {
         $users = $this->model->getAll();
         $data = [
-            'page' => 'Управління користувачами',
+            'page' => 'Manage Users',
             'users' => $users,
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff'),
-            'name' => Utils::getCookie('name', 'Гість'),
+            'name' => Utils::getCookie('name', 'Guest'),
             'gender' => Utils::getCookie('gender', '')
         ];
         $this->view->render($data, 'users/users.php');
@@ -25,7 +25,7 @@ class UsersController extends Controller
     public function action_create()
     {
         $data = [
-            'page' => 'Додати користувача',
+            'page' => 'Add user',
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff')
         ];
         $this->view->render($data, 'users/create.php');
@@ -56,7 +56,7 @@ class UsersController extends Controller
         }
 
         $data = [
-            'page' => 'Редагувати користувача',
+            'page' => 'Edit user',
             'user' => $user,
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff')
         ];

@@ -1,4 +1,4 @@
-<h2>Серверні змінні</h2>
+<h2>Server variables</h2>
 <div>
     <?php 
         foreach ($_SERVER as $key => $value) 
@@ -8,7 +8,7 @@
     ?>
 </div>
 
-<h1>GET змінні</h1>
+<h1>GET variables</h1>
 <div>
     <?php 
         foreach ($_GET as $key => $value) 
@@ -18,7 +18,7 @@
     ?>
 </div>
 
-<h1>POST змінні</h1>
+<h1>POST variables</h1>
 <div>
     <?php 
         foreach ($_POST as $key => $value) 

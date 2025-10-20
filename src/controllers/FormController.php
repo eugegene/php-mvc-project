@@ -4,9 +4,9 @@ class FormController extends Controller
     private function _render_page(): void
     {
         $data = [
-            'page' => 'Головна сторінка',
+            'page' => 'Home page',
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff'),
-            'name' => Utils::getCookie('name', 'Гість'),
+            'name' => Utils::getCookie('name', 'Guest'),
             'gender' => Utils::getCookie('gender', '')
         ];
         $this->view->render($data, 'form.php');
@@ -30,14 +30,14 @@ class FormController extends Controller
             $errors = [];
 
             if (preg_match('/[^A-Za-z\s-]/', $lastname) || empty($lastname)) {
-                $errors[] = "Прізвище містить неанглійські символи або порожнє.";
+                $errors[] = "Last name contains non-English characters or is empty.";
             }
             if (preg_match('/[^A-Za-z\s-]/', $firstname) || empty($firstname)) {
-                $errors[] = "Ім'я містить неанглійські символи або порожнє.";
+                $errors[] = "First name contains non-English characters or is empty.";
             }
-            if (preg_match('/[^A-Za-z\s-]/', $middlename) || empty($middlename)) {
-                $errors[] = "По батькові містить неанглійські символи або порожнє.";
-            }
+            // if (preg_match('/[^A-Za-z\s-]/', $middlename) || empty($middlename)) {
+            //     $errors[] = "Middle name contains non-English characters or is empty.";
+            // }
 
             if (!empty($errors)) {
                 $errorString = "<ul>";
@@ -45,9 +45,9 @@ class FormController extends Controller
                     $errorString .= "<li>$error</li>";
                 }
                 $errorString .= "</ul>";
-                echo "<p>Помилка:</p>" . $errorString;
+                echo "<p>Error:</p>" . $errorString;
             } else {
-                echo "<p>Успішно!</p>";
+                echo "<p>Success!</p>";
             }
         }
 

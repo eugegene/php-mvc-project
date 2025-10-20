@@ -13,10 +13,10 @@ class PagesController extends Controller
     {
         $pages = $this->model->getAll();
         $data = [
-            'page' => 'Управління сторінками',
+            'page' => 'Manage Pages',
             'pages' => $pages,
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff'),
-            'name' => Utils::getCookie('name', 'Гість'),
+            'name' => Utils::getCookie('name', 'Guest'),
             'gender' => Utils::getCookie('gender', '')
         ];
         $this->view->render($data, 'pages/pages.php');
@@ -25,7 +25,7 @@ class PagesController extends Controller
     public function action_create()
     {
         $data = [
-            'page' => 'Додати сторінку',
+            'page' => 'Add page',
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff')
         ];
         $this->view->render($data, 'pages/create.php');
@@ -59,7 +59,7 @@ class PagesController extends Controller
         }
 
         $data = [
-            'page' => 'Редагувати сторінку',
+            'page' => 'Edit page',
             'page_data' => $page,
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff')
         ];

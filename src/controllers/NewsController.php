@@ -13,10 +13,10 @@ class NewsController extends Controller
     {
         $news = $this->model->getAll();
         $data = [
-            'page' => 'Управління новинами',
+            'page' => 'Manage News',
             'news' => $news,
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff'),
-            'name' => Utils::getCookie('name', 'Гість'),
+            'name' => Utils::getCookie('name', 'Guest'),
             'gender' => Utils::getCookie('gender', '')
         ];
         $this->view->render($data, 'news/news.php');
@@ -25,7 +25,7 @@ class NewsController extends Controller
     public function action_create()
     {
         $data = [
-            'page' => 'Додати новину',
+            'page' => 'Add news',
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff')
         ];
         $this->view->render($data, 'news/create.php');
@@ -56,7 +56,7 @@ class NewsController extends Controller
         }
 
         $data = [
-            'page' => 'Редагувати новину',
+            'page' => 'Edit news',
             'news' => $news,
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff')
         ];

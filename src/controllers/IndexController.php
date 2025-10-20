@@ -4,9 +4,9 @@ class IndexController extends Controller
     private function _render_page(): void
     {
         $data = [
-            'page' => 'Головна сторінка',
+            'page' => 'Home page',
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff'),
-            'name' => Utils::getCookie('name', 'Гість'),
+            'name' => Utils::getCookie('name', 'Guest'),
             'gender' => Utils::getCookie('gender', '')
         ];
         $this->view->render($data, 'index.php');

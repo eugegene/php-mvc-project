@@ -21,7 +21,7 @@ class Router
         }
 
         header("HTTP/1.0 404 Not Found");
-        echo "<h2>Сторінка не знайдена</h2>";
+        echo "<h2>Page not found!</h2>";
         exit();
     }
 

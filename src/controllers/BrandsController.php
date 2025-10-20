@@ -13,10 +13,10 @@ class BrandsController extends Controller
     {
         $brands = $this->model->getAll();
         $data = [
-            'page' => 'Управління брендами',
+            'page' => 'Manage Brands',
             'brands' => $brands,
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff'),
-            'name' => Utils::getCookie('name', 'Гість'),
+            'name' => Utils::getCookie('name', 'Guest'),
             'gender' => Utils::getCookie('gender', '')
         ];
         $this->view->render($data, 'brands/brands.php');
@@ -25,7 +25,7 @@ class BrandsController extends Controller
     public function action_create()
     {
         $data = [
-            'page' => 'Додати бренд',
+            'page' => 'Add brand',
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff')
         ];
         $this->view->render($data, 'brands/create.php');
@@ -55,7 +55,7 @@ class BrandsController extends Controller
         }
 
         $data = [
-            'page' => 'Редагувати бренд',
+            'page' => 'Edit brand',
             'brand' => $brand,
             'bgcolor' => Utils::getSession('bgcolor', '#ffffff')
         ];

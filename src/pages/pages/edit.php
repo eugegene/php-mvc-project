@@ -1,9 +1,9 @@
 <div class="crud-table-wrapper">
-  <h2>Редагувати сторінку</h2>
+  <h2>Edit page</h2>
   <form class="crud-table" action="index.php?page=pages&action=edit&id=<?= $page_data['id'] ?>" method="post">
     <input hidden name="action" value="save_edited">
     <div>
-      <label for="title">Заголовок:</label>
+      <label for="title">Title:</label>
       <input type="text" id="title" name="title" value="<?= htmlspecialchars($page_data['title']) ?>" required>
     </div>
     <div>
@@ -19,9 +19,9 @@
       <input type="text" id="h1" name="h1" value="<?= htmlspecialchars($page_data['h1']) ?>">
     </div>
     <div>
-      <label for="content">Контент:</label>
+      <label for="content">Content:</label>
       <textarea id="content" name="content" required><?= htmlspecialchars($page_data['content']) ?></textarea>
     </div>
-    <button class="crud-btn" type="submit">Зберегти</button>
+    <button class="crud-btn" type="submit">Save</button>
   </form>
 </div>

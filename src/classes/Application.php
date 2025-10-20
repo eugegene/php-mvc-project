@@ -24,17 +24,17 @@ class Application
         $router = new Router();
         $controller = $router->getController();
         $controllerAction = $router->getAction();
-        echo $controllerAction . '<br>';
+        // echo $controllerAction . '<br>';
 
         if (!method_exists($controller, $controllerAction)) {
             header("HTTP/1.0 404 Not Found");
-            echo "<h2>Сторінка не знайдена</h2>";
+            echo "<h2>Page not found!</h2>";
             exit();
         }
 
         if (!is_callable([$controller, $controllerAction])) {
             header("HTTP/1.0 404 Not Found");
-            echo "<h2>Сторінка не знайдена</h2>";
+            echo "<h2>Page not found!</h2>";
             exit();
         }
 

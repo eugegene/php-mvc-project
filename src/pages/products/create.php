@@ -1,13 +1,13 @@
 <div class="crud-table-wrapper">
-    <h2>Додати товар</h2>
+    <h2>Edit product</h2>
     <form class="crud-table" action="index.php?page=products&action=create" method="post">
         <input hidden name="action" value="save_created_product">
         <div>
-            <label for="name">Назва:</label>
+            <label for="name">Title:</label>
             <input type="text" id="name" name="name" required>
         </div>
         <div>
-            <label for="brand_id">Бренд:</label>
+            <label for="brand_id">Brand:</label>
             <select id="brand_id" name="brand_id" required>
                 <?php while ($brand = $brands->fetch_assoc()): ?>
                     <option value="<?= $brand['id'] ?>"><?= htmlspecialchars($brand['name']) ?></option>
@@ -15,9 +15,9 @@
             </select>
         </div>
         <div>
-            <label for="price">Ціна:</label>
+            <label for="price">Price:</label>
             <input type="number" id="price" name="price" step="0.01" required>
         </div>
-        <button class="crud-btn" type="submit">Зберегти</button>
+        <button class="crud-btn" type="submit">Save</button>
     </form>
 </div>
